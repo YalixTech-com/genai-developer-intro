@@ -6,7 +6,7 @@ Welcome to the world of Generative AI! This guide will help you understand the b
 1. [Introduction to Generative AI](#introduction-to-generative-ai)
 2. [Understanding Large Language Models (LLMs)](#understanding-large-language-models-llms)
 3. [Getting Started with OpenAI](#getting-started-with-openai)
-4. [Basic Prompt Engineering](#basic-prompt-engineering)
+4. [Setting Up Your Environment](#setting-up-your-environment)
 5. [Sample Code Walkthrough](#sample-code-walkthrough)
 6. [Next Steps](#next-steps)
 
@@ -31,7 +31,7 @@ LLMs are the foundation of modern generative AI. They work by:
 - GPT (OpenAI)
 - Claude (Anthropic)
 - LLaMA (Meta)
-- PaLM (Google)
+- Gemini (Google)
 
 ## Getting Started with OpenAI
 
@@ -43,34 +43,45 @@ To use the sample code in this repository:
    ```
    OPENAI_API_KEY=your-api-key-here
    ```
-4. Install dependencies:
+
+## Setting Up Your Environment
+
+Before running the sample code, you'll need to set up a Python virtual environment:
+
+1. **Create a virtual environment**:
+   ```
+   # On Windows
+   python -m venv venv
+   
+   # On macOS/Linux
+   python3 -m venv venv
+   ```
+
+2. **Activate the virtual environment**:
+   ```
+   # On Windows
+   venv\Scripts\activate
+   
+   # On macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies**:
    ```
    pip install -r requirements.txt
    ```
 
-## Basic Prompt Engineering
-
-Effective prompts are crucial for getting good results from LLMs. Here are some tips:
-
-1. **Be Specific**: Clearly state what you want
-2. **Provide Context**: Give relevant background information
-3. **Use Examples**: Show the desired format or style
-4. **Iterate**: Refine your prompts based on results
-
-### Example Prompts:
-```
-# Simple Question
-What is artificial intelligence?
-
-# Role-based Prompt
-You are a helpful AI assistant. Explain quantum computing in simple terms.
-
-# Structured Prompt
-Please provide a brief explanation of machine learning, including:
-1. Definition
-2. Key concepts
-3. Common applications
-```
+4. **Run the sample code**:
+   ```
+   # Run the simple prompting example
+   python simple_prompting.py
+   
+   # Run the chat completion example
+   python chat_completion_example.py
+   
+   # Run the LangChain example
+   python basic_langchain_chain.py
+   ```
 
 ## Sample Code Walkthrough
 
