@@ -25,7 +25,7 @@ def basic_prompt(prompt_text):
     """
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4.1-nano-2025-04-14",
             messages=[
                 {"role": "user", "content": prompt_text}
             ],

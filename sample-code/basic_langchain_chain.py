@@ -1,13 +1,14 @@
 """
 Basic LangChain Example
-This script demonstrates how to create a simple chain using LangChain.
+This script demonstrates how to create a simple chain using LangChain 0.3.
 """
 
 import os
 from dotenv import load_dotenv
-from langchain.llms import OpenAI
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
 
 # Load environment variables from .env file
 load_dotenv()
@@ -17,7 +18,7 @@ def create_summary_chain():
     Create a LangChain that generates summaries of text.
     
     Returns:
-        LLMChain: A chain that can generate summaries
+        A chain that can generate summaries
     """
     # Create a prompt template
     template = """
@@ -34,13 +35,18 @@ def create_summary_chain():
     )
     
     # Initialize the language model
-    llm = OpenAI(
+    llm = ChatOpenAI(
         temperature=0.7,
-        model_name="gpt-3.5-turbo"
+        model="gpt-4.1-nano-2025-04-14"  # Updated model name format
     )
     
-    # Create the chain
-    chain = LLMChain(llm=llm, prompt=prompt)
+    # Create the chain using the new LCEL (LangChain Expression Language)
+    chain = (
+        {"text": RunnablePassthrough()} 
+        | prompt 
+        | llm 
+        | StrOutputParser()
+    )
     
     return chain
 
@@ -60,7 +66,8 @@ def main():
     print(text)
     print("\nGenerating summary...")
     
-    result = summary_chain.run(text=text)
+    # Updated invocation method
+    result = summary_chain.invoke(text)
     print("\nSummary:")
     print(result)
 
