@@ -1,0 +1,132 @@
+{
+    "verification_report": {
+      "processed_data": {
+        "product_catalog": [
+          {
+            "product_id": "P001",
+            "name": "Laptop Pro",
+            "price": 1299.99,
+            "category": "Electronics",
+            "inventory": {
+              "stock": 50,
+              "condition": "New",
+              "added_date": "2024-01-15"
+            },
+            "manufacturer": "TechCorp"
+          },
+          {
+            "product_id": "P002",
+            "name": "Wireless Mouse",
+            "price": 29.99,
+            "category": "Accessories",
+            "inventory": {
+              "stock": 100,
+              "condition": "New",
+              "added_date": "2024-01-15"
+            },
+            "manufacturer": "TechCorp"
+          },
+          {
+            "product_id": "P003",
+            "name": "4K Monitor",
+            "price": 499.99,
+            "category": "Electronics",
+            "inventory": {
+              "stock": 30,
+              "condition": "New",
+              "added_date": "2024-01-15"
+            },
+            "manufacturer": "DisplayTech"
+          }
+        ]
+      },
+      "source_data": {
+        "source1": {
+          "products": [
+            {
+              "id": "P001",
+              "name": "Laptop Pro",
+              "price": 1299.99,
+              "category": "Electronics",
+              "stock": 50,
+              "manufacturer": "TechCorp"
+            },
+            {
+              "id": "P002",
+              "name": "Wireless Mouse",
+              "price": 29.99,
+              "category": "Accessories",
+              "stock": 100,
+              "manufacturer": "TechCorp"
+            },
+            {
+              "id": "P003",
+              "name": "4K Monitor",
+              "price": 499.99,
+              "category": "Electronics",
+              "stock": 30,
+              "manufacturer": "DisplayTech"
+            }
+          ]
+        },
+        "source2": {
+          "inventory": {
+            "last_updated": "2024-04-20",
+            "warehouse": "Main Storage",
+            "items": [
+              {
+                "product_id": "P001",
+                "details": {
+                  "product_name": "Laptop Pro",
+                  "unit_price": 1299.99,
+                  "product_type": "Electronics",
+                  "available_units": 50,
+                  "brand": "TechCorp"
+                },
+                "metadata": {
+                  "added_date": "2024-01-15",
+                  "condition": "New"
+                }
+              },
+              {
+                "product_id": "P002",
+                "details": {
+                  "product_name": "Wireless Mouse",
+                  "unit_price": 29.99,
+                  "product_type": "Accessories",
+                  "available_units": 100,
+                  "brand": "TechCorp"
+                },
+                "metadata": {
+                  "added_date": "2024-01-15",
+                  "condition": "New"
+                }
+              },
+              {
+                "product_id": "P003",
+                "details": {
+                  "product_name": "4K Monitor",
+                  "unit_price": 499.99,
+                  "product_type": "Electronics",
+                  "available_units": 30,
+                  "brand": "DisplayTech"
+                },
+                "metadata": {
+                  "added_date": "2024-01-15",
+                  "condition": "New"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "schema_compliance": {
+        "is_compliant": true,
+        "issues": []
+      },
+      "data_integrity": {
+        "is_valid": true,
+        "issues": []
+      }
+    }
+  }

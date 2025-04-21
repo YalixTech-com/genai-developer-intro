@@ -56,7 +56,6 @@
 
 - **Self-Reflection Prompting**: Asking the model to evaluate and improve its own outputs.
 
-- **Advanced Tools**: LangChain and LlamaIndex for building complex applications with LLMs.
 
 ### ⏱️ 30 – 35 min | Topic 7: Agentic Workflows (LLM Agents)
 

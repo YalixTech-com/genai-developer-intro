@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Laptop Pro",
+      "price": 1299.99,
+      "category": "Electronics",
+      "stock": 50,
+      "manufacturer": "TechCorp"
+    },
+    {
+      "id": "P002",
+      "name": "Wireless Mouse",
+      "price": 29.99,
+      "category": "Accessories",
+      "stock": 100,
+      "manufacturer": "TechCorp"
+    },
+    {
+      "id": "P003",
+      "name": "4K Monitor",
+      "price": 499.99,
+      "category": "Electronics",
+      "stock": 30,
+      "manufacturer": "DisplayTech"
+    }
+  ]
+} 
