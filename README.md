@@ -36,18 +36,11 @@ genai-developer-intro/
    cd genai-developer-intro
    ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Explore the examples:
+   - Check out [Prompt Engineering Examples](prompt-engineering/README.md) for basic concepts and setup
+   - Explore [AI Agents Examples](agents/crew-ai/README.md) for advanced automation
 
-3. Set up your OpenAI API key:
-   - Create a `.env` file in the project root
-   - Add your API key: `OPENAI_API_KEY=your-key-here`
-
-4. Explore the examples:
-   - Check out [Prompt Engineering Examples](prompt-engineering/README.md)
-   - Explore [AI Agents Examples](agents/crew-ai/README.md)
+Each example directory contains its own README with specific setup instructions, dependencies, and usage guidelines.
 
 ## 📖 Documentation
 
