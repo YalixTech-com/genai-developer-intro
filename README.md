@@ -7,7 +7,7 @@ Welcome to the GenAI Developer Introduction repository! This project provides a 
 This repository contains:
 
 - 📚 A comprehensive guide to getting started with GenAI
-- 💻 Sample code demonstrating basic concepts
+- 💻 Sample code demonstrating various GenAI concepts
 - 🔧 Practical examples using OpenAI and LangChain
 - 📝 Clear documentation and explanations
 
@@ -15,13 +15,17 @@ This repository contains:
 
 ```
 genai-developer-intro/
-├── sample-code/
-│   ├── simple_prompting.py      # Basic prompt examples
-│   ├── chat_completion_example.py  # Interactive chat demo
-│   └── basic_langchain_chain.py   # LangChain introduction
-├── GUIDE.md                     # Detailed getting started guide
-├── README.md                    # This file
-└── requirements.txt             # Project dependencies
+├── prompt-engineering/          # Prompt engineering techniques and examples
+│   ├── README.md               # Guide to prompt engineering examples
+│   └── various prompt examples # Different prompting techniques
+├── agents/                     # AI agents and automation examples
+│   └── crew-ai/               # CrewAI implementation examples
+│       ├── README.md          # Guide to agent examples
+│       ├── main.py            # Main implementation
+│       └── data/              # Data directory
+├── GUIDE.md                    # Detailed getting started guide
+├── README.md                   # This file
+└── requirements.txt            # Project dependencies
 ```
 
 ## 🎯 Getting Started
@@ -41,23 +45,22 @@ genai-developer-intro/
    - Create a `.env` file in the project root
    - Add your API key: `OPENAI_API_KEY=your-key-here`
 
-4. Try the sample code:
-   ```bash
-   python sample-code/simple_prompting.py
-   ```
+4. Explore the examples:
+   - Check out [Prompt Engineering Examples](prompt-engineering/README.md)
+   - Explore [AI Agents Examples](agents/crew-ai/README.md)
 
 ## 📖 Documentation
 
 - [GUIDE.md](GUIDE.md) - Comprehensive guide to getting started
-- Sample code includes detailed comments and explanations
-- Each example demonstrates different aspects of GenAI development
+- [Prompt Engineering Guide](prompt-engineering/README.md) - Detailed guide to prompt engineering techniques
+- [Agents Guide](agents/crew-ai/README.md) - Guide to working with AI agents
+- Each example includes detailed comments and explanations
 
 ## 🎓 Learning Path
 
-1. Start with `simple_prompting.py` to understand basic concepts
-2. Move to `chat_completion_example.py` for interactive applications
-3. Explore `basic_langchain_chain.py` to learn about advanced frameworks
-4. Read through [GUIDE.md](GUIDE.md) for detailed explanations
+1. Start with the [Prompt Engineering](prompt-engineering/README.md) examples to understand basic concepts
+2. Move to [AI Agents](agents/crew-ai/README.md) to learn about advanced automation
+3. Read through [GUIDE.md](GUIDE.md) for detailed explanations
 
 ## 🤝 Contributing
 
