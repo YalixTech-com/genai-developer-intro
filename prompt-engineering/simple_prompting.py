@@ -25,12 +25,12 @@ def basic_prompt(prompt_text):
     """
     try:
         response = client.chat.completions.create(
-            model="gpt-4.1-nano-2025-04-14",
+            model=os.getenv("OPENAI_MODEL", "gpt-4.1-nano-2025-04-14"),
             messages=[
                 {"role": "user", "content": prompt_text}
             ],
-            temperature=0.7,
-            max_tokens=150
+            temperature=float(os.getenv("OPENAI_TEMPERATURE", 0.7)),
+            max_tokens=int(os.getenv("OPENAI_MAX_TOKENS", 150)),
         )
         return response.choices[0].message.content
     except Exception as e:
@@ -56,4 +56,4 @@ def main():
     print(f"Response: {response}\n")
 
 if __name__ == "__main__":
-    main() 
+    main()

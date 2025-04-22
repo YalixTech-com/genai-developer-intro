@@ -27,12 +27,12 @@ def few_shot_prompt(prompt_with_examples):
     """
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=os.getenv("OPENAI_MODEL", "gpt-3.5-turbo"),
             messages=[
                 {"role": "user", "content": prompt_with_examples}
             ],
-            temperature=0.7,
-            max_tokens=150,
+            temperature=float(os.getenv("OPENAI_TEMPERATURE", 0.7)),
+            max_tokens=int(os.getenv("OPENAI_MAX_TOKENS", 150)),
             stop=["\n\n"] # Often helpful to stop generation after the answer
         )
         return response.choices[0].message.content.strip()

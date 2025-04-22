@@ -39,10 +39,10 @@ class ChatSession:
         """
         try:
             response = client.chat.completions.create(
-                model="gpt-4.1-nano-2025-04-14",
+                model=os.getenv("OPENAI_MODEL", "gpt-4.1-nano-2025-04-14"),
                 messages=self.messages,
-                temperature=0.7,
-                max_tokens=150
+                temperature=float(os.getenv("OPENAI_TEMPERATURE", 0.7)),
+                max_tokens=int(os.getenv("OPENAI_MAX_TOKENS", 150))
             )
             return response.choices[0].message.content
         except Exception as e:
@@ -75,4 +75,4 @@ def main():
         chat.add_message("assistant", response)
 
 if __name__ == "__main__":
-    main() 
+    main()

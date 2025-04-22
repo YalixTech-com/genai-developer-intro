@@ -36,8 +36,8 @@ def create_summary_chain():
     
     # Initialize the language model
     llm = ChatOpenAI(
-        temperature=0.7,
-        model="gpt-4.1-nano-2025-04-14"  # Updated model name format
+        temperature=float(os.getenv("OPENAI_TEMPERATURE", 0.7)),
+        model=os.getenv("OPENAI_MODEL", "gpt-4.1-nano-2025-04-14")
     )
     
     # Create the chain using the new LCEL (LangChain Expression Language)
@@ -72,4 +72,4 @@ def main():
     print(result)
 
 if __name__ == "__main__":
-    main() 
+    main()
